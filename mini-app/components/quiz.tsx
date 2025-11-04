@@ -86,7 +86,7 @@ export function Quiz() {
   };
 
   if (result) {
-    const { name, image } = princessInfo[result];
+    const { name, image } = princessInfo[result as keyof typeof princessInfo];
     return (
       <div className="flex flex-col items-center gap-4">
         <h2 className="text-2xl font-bold">You are most similar to {name}!</h2>
